@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunger</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <header id="home" class="hunger-header">
+            <nav class="hunger-header_list">
+                <ul class="hunger-header_list__nav">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#team">TEAM</a></li>
+                    <li><a href="#booking">BOOKING</a></li>
+                </ul>   
+                <ul class="hunger-header_list__nav">
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#galerie">GALERIE</a></li>
+                    <li><a href="#events">EVENTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="mobil-menu_open" id="mobil-menu">
+            </div>
+            <article class="hunger-header_home">
+                <aside class="hunger-header_home__leftColomn">
+                    <nav class="hunger-header_list__mobil">
+                        <ul class="hunger-header_list__mobil__nav">
+                            <li><a href="#home">HOME</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#team">TEAM</a></li>
+                            <li><a href="#booking">BOOKING</a></li>
+                            <li><a href="#menu">MENU</a></li>
+                            <li><a href="#galerie">GALERIE</a></li>
+                            <li><a href="#events">EVENTS</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                    <p>Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM</p>
+                </aside>
+                <hr class="verticalLine">
+                <section class="hunger-header_home__homeColomn">
+                    <img src="./img/Vector.png" alt="logo" class="logo"/>
+                    <p>RESTAURANT</p>
+                    <h1>HUNGRY PEOPLE</h1>
+                    <hr class="lineUnderHeading"/>
+                    <div class="button_select">
+                        <button class="button_select__select">BOOK TABLE</button>
+                        <button class="button_select__unselect">EXPLORE</button>
+                    </div>
+                    <a class="button_down" href="#about"><img src="./img/down-btn.png" alt="button-down" class="button_down"/></a>
+                </section>
+                <hr class="verticalLine">
+                <aside class="hunger-header_home__rigthColomn">
+                    <div>
+                        <img src="./img/facebook.png" alt="facebook"/>
+                        <img src="./img/twitter.png" alt="twitter"/>
+                        <img src="./img/instagram.png" alt="instagram"/>
+                    </div>
+                </aside>
+            </article>
+        </header>
+        <main class="hunger-content">
+            <article id="about" class="hunger-content_about">
+                <section class="hunger-content_about__text main-text">
+                    <h2>About us</h2>
+                    <hr class="lineUnderHeading">
+                    <div class="main-text_content">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</h3>
+                        <p>Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+                    </div>
+                </section>
+                <aside class="hunger-content_about__image main-image">
+                    <div class="main-image_box main-image_box_position-left">
+                        <img src="./img/about-img.jpeg" alt="about" class="content">
+                        <div class="squer rigth"></div>
+                    </div>
+                </aside>
+            </article>
+            <article id="team" class="hunger-content_team backImage">
+                <div class="block-header">
+                    <p>Our team</p>
+                </div>
+                <div class="section">
+                    <aside class="hunger-content_team__image main-image">
+                        <div class="main-image_box main-image_box_position-right">
+                            <div class="squer left"></div>
+                            <img src="./img/team-img.jpeg" alt="team" class="content">
+                        </div>
+                    </aside>
+                    <section class="hunger-content_team__text main-text">
+                        <h2>Master chef</h2>
+                        <hr class="lineUnderHeading">
+                        <div class="main-text_content">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</h3>
+                            <p>Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+            <article id="booking" class="hunger-content_booking">
+                <div class="section">
+                    <section class="hunger-content_booking_form main-text">
+                        <h2>Book a table</h2>
+                        <hr class="lineUnderHeading">
+                        <form name="booking" method="POST" action="./action/booking.php">
+                            <div class='booking_form'>
+                                <input type="text" placeholder="Name" name="name" required>
+                                <input type="email" placeholder="Email" name="email" required pattern=".+@.+\..+">
+                                <input type="tel" placeholder="Phone" required name="phone">
+                                <input type="number" placeholder="People" required name="people" min="1">
+                                <input type="text" placeholder="Date(mm/dd)" required name="date">
+                                <input type="text" placeholder="Time(hh:mm)" required name="time">
+                            </div>
+                            <button type='submit' class="button_form booking_form_control" id="button_form_submit_booking">BOOK NOW</button>
+                        </form>
+                    </section>
+                    <aside class="hunger-content_booking_image main-image">
+                        <div class="main-image_box main-image_box_position-left">
+                            <img src="./img/booking-img.jpeg" alt="booking" class="content">
+                            <div class="squer rigth"></div>
+                        </div>
+                    </aside>
+                </div>
+                <aside class="content-footer">
+                    <p> Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM, Phone: +40 729 131 637/+40 726 458 782</p>
+                </aside>
+            </article>
+            <article id='specialties' class="hunger-content_specialties backImage">
+                <div class="block-header">
+                    <p>specialties</p>
+                </div>
+                <div class="section">
+                    <aside class="hunger-content_specialties__image main-image">
+                        <div class="main-image_box main-image_box_position-right">
+                            <div class="squer left"></div>
+                            <img src="./img/speshial-img.png" alt="specialties" class="content">
+                        </div>
+                    </aside>
+                    <section class="hunger-content_specialties__text main-text">
+                        <h2>chocolate pancakes</h2>
+                        <hr class="lineUnderHeading">
+                        <div class="main-text_content">
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</h3>
+                            <p>Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+                        </div>
+                    </section>
+                </div>
+            </article>
+            <article  id="menu" class="hunger-content_menu">
+                <section class="hunger-content_menu__text main-text_center">
+                    <h2>DELICIOUS MENU</h2>
+                    <hr class="lineUnderHeading">
+                    <div class="main-text_content">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</h3>
+                    </div>
+                    <nav class="hunger-content_menu__nav">
+                        <ul>
+                            <li id='soup' class="select">SOUP</li>
+                            <li id="pizza">PIZZA</li>
+                            <li id="pasta">PASTA</li>
+                            <li id="desert">DESERT</li>
+                            <li id="wine">WINE</li>
+                            <li id="beer">BEER</li>
+                            <li id="drinks">DRINKS</li>
+                        </ul>
+                    </nav>
+                </section>
+                <div class="hunger-content_menu__menu">
+                </div>
+            </article>
+            <article  id="events" class='hunger-content_privatEvents backImage'>
+                <div class="block-header">
+                    <p>PRIVATE EVENTS</p>
+                </div>
+                <section class="hunger-content_privatEvents__image">
+                    <div class="componens">
+                        <div class="squer privatEvent_left"></div>
+                        <div class="main-image_box_event">
+                            <img src="./img/privat-wedding-img.jpeg" alt="privat-wedding" class="content">
+                        </div>
+                        <div class="rectangle__left">
+                            <p>weddings</p>
+                        </div>
+                    </div>
+                    <div class="componens">
+                        <div class="rectangle__rigth">
+                            <p>corporate parties</p>
+                        </div>
+                        <div class="main-image_box_event">
+                            <img src='./img/private-corporate-img.jpeg' alt="private-corporate" class="content">
+                        </div>
+                        <div class="squer privatEvent_rigth"></div>
+                    </div>
+                </section>
+                <aside class="content-footer">
+                    <p> For private events please call: +40 729 131 637/+40 726 458 782 or use the contact form.</p>
+                </aside>
+            </article>
+            <article id="galerie" class="hunger-content_photoGalerie">
+                <section class="hunger-content_photoGalerie__photo">
+                    <div class="main-image_box_photo">
+                        <img src="./img/photo-gallerie-mazzo.jpeg" alt="mazzo" class="galerie">
+                    </div>
+                    <div class="main-image_box_photo">
+                        <img src="img/photo-gallerie-fireplace.jpeg" alt="fireplace" class="galerie">
+                    </div>
+                    <div class="main-image_box_photo">
+                        <img src='./img/photo-gallerie-table.jpeg' alt="table" class="galerie">
+                    </div>
+                    <div class="main-image_box_photo">
+                        <img src="./img/photo-gallerie-mazzo4.jpeg" alt="mazzo4" class="galerie">
+                    </div>
+                </section>
+            </article>
+            <article  id="contact" class="hunger-content_contact">
+                <section class="hunger-content_contact__text main-text_center">
+                    <h2>CONTACT</h2>
+                    <hr class="lineUnderHeading">
+                    <div class="main-text_content">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.</h3>
+                    </div>
+                </section>
+                <div class="hunger-content_contact__form">
+                    <form class="hunger-content_contact__form_form" method="POST" action="./action/contact.php">
+                        <div class="input_form">
+                            <input type="text" placeholder="Name" name="name" required>
+                            <input type="email" placeholder="Email" name="email" required pattern=".+@.+\..+">
+                            <input type="tel" placeholder="Phone" name="phone" required>
+                        </div>
+                        <div class="message_form">
+                            <textarea wrap="hard" cols="1" rows="5"  name="message" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="info_form">
+                            <div class="info_form_information">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <p>5th London Boulevard, U.K.</p>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <p>+40 729 131 637/+40 726 458 782</p>
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <p>office@mindblister.com</p>
+                            </div>
+                            <button type="submit" class="button_form">SEND MESSAGE</button>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </main>
+        <footer class="hunger-footer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.8390716845656!2d14.441116515069664!3d40.87540573554009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bafb98245d643%3A0x28b132111f33221e!2sHungry%20people!5e0!3m2!1sru!2sru!4v1589905070233!5m2!1sru!2sru" width="1400" height="475" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="hunger-footer__text">
+                <p>© Copyright Mindblister 2019</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/maskInput.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
